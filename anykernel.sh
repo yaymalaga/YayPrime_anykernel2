@@ -187,7 +187,7 @@ patch_fstab() {
 ## AnyKernel permissions
 # set permissions for included files
 chmod -R 755 $ramdisk
-
+chmod 750 $ramdisk/init.yayprime.rc
 
 ## AnyKernel install
 dump_boot;
@@ -230,6 +230,7 @@ rm -f /system/lib/hw/power.msm8960.so
 rm -f /system/lib/hw/power.mako.so
 
 # begin ramdisk changes
+insert_line init.mako.rc "yayprime" after "import init.mako.usb.rc" "import init.yayprime.rc\n";
 # end ramdisk changes
 
 write_boot;
