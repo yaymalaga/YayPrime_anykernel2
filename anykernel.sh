@@ -192,6 +192,43 @@ chmod -R 755 $ramdisk
 ## AnyKernel install
 dump_boot;
 
+# clean kernel settings apps shared_prefs
+rm -rf /data/data/mobi.cyann.nstools/shared_prefs
+rm -rf /data/data/aperture.ezekeel.gladoscontrol/shared_prefs
+rm -rf /data/data/com.derkernel.tkt/shared_prefs
+rm -rf /data/data/com.franco.kernel/shared_prefs
+rm -rf /data/data/com.liquid.control/shared_prefs
+rm -rf /data/data/com.grarak.kernelauditor/shared_prefs
+rm -rf /data/data/com.af.synapse/databases/*
+
+# clean previous scripts of other kernels
+rm -f /system/etc/init.d/95dimmers
+rm -f /system/etc/init.d/98tweak
+rm -f /system/etc/init.d/99complete
+rm -f /system/etc/init.d/98_startup_script
+rm -f /system/etc/init.d/99_startup_complete
+rm -f /system/etc/init.d/89airtweaks
+rm -f /system/etc/init.d/98airtweaks
+rm -f /system/etc/init.d/98airtweaks
+rm -f /system/etc/init.d/99airtweaks
+rm -f /system/etc/init.d/13overclock
+rm -f /system/etc/init.d/00turtle
+rm -f /system/etc/init.d/00confg
+rm -f /system/etc/init.d/01mpdecision
+rm -f /system/etc/init.d/00ak
+rm -f /system/etc/init.d/*Neo*
+rm -rf /system/bin/*Neo*
+rm -rf /sdcard/neo
+
+# clean modules
+rm -rf /system/lib/modules
+
+# clean system binaries
+rm -rf /system/bin/mpdecision
+rm -rf /system/bin/thermald
+rm -f /system/lib/hw/power.msm8960.so
+rm -f /system/lib/hw/power.mako.so
+
 # begin ramdisk changes
 # end ramdisk changes
 
