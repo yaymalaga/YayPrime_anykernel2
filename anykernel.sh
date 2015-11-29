@@ -3,15 +3,14 @@
 
 ## AnyKernel setup
 # EDIFY properties
-kernel.string=DirtyV by bsmitty83 @ xda-developers
 do.devicecheck=1
-do.initd=1
+do.initd=0
 do.modules=0
 do.cleanup=1
-device.name1=maguro
-device.name2=toro
-device.name3=toroplus
-device.name4=
+device.name1=mako
+device.name2=Mako
+device.name3=nexus 4
+device.name4=Nexus 4
 device.name5=
 
 # shell variables
